@@ -1,0 +1,90 @@
+<div class="header">
+    <div class="logo">
+      <i class="fa fa-user"></i>
+      <span>Admin</span>
+    </div>
+    <a href="#" class="nav-trigger"><span></span></a>
+  </div>
+  <div class="side-nav">
+    <div class="logo">
+      <i class="fa fa-user"></i>
+      <span>Admin</span>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">
+            <span><i class="fa fa-user"></i></span>
+            <span>Add Admin</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+
+            <span><i class="fa fa-envelope"></i></span>
+            <span>Resume File</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span><i class="fa fa-sign-out"></i></span>
+            <span>Sign-out</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+  <div class="main-content">
+    <div class="main">
+      	
+        <div class="container container-fluid">
+            <h2>List of Applicants</h2>
+            <p></p>
+            <input class="form-control searchby" type="text" placeholder="Search employee" ng-model="searchText"/>
+				<select class="form-control sortby" ng-model="sortColumn">
+							<option value="">Sort by</option>
+							<option value="id">Id</option>
+							<option value="name">Profile Name</option>
+							<option value="email">Skill Set</option>
+							<option value="phone">Contact #</option>
+							<option value="useremail">Email</option>
+							<option value="website">Website</option> <br>
+						</select>            
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Profile name</th>
+                  <th>Skill set</th>
+                  <th>Link to resume</th>
+                  <th>Contact #</th>
+                  <th>Email</th>
+                  <th>Settings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John Doe</td>
+                  <td>Angular Js</td>
+                  <td><a href="#">resume</a></td>
+                  <td>+639483545659</td>
+                  <td>johndoe@gmail.com</td>
+                  <td>
+                      <a href="file/resume/Resume.pdf" download="downloadresume"><span ng-click="edit($index)" ng-hide="profile.editable">Download</span></a>
+                      <span ng-click="view($index)"> | View</span>
+                      <span ng-click="edit($index)"> | Edit</span>
+                      <span ng-click="delete($index)"> | Delete</span>
+                    </td>
+                </tr>
+             
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  
